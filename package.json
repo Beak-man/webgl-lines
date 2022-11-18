@@ -62,10 +62,10 @@
     "watchify": "git://github.com/mattdesl/watchify#fast"
   },
   "scripts": {
-    "native": "./dev.sh native",
-    "triangles": "./dev.sh triangles",
-    "expanded": "./dev.sh expanded",
-    "projected": "./dev.sh projected",
+    "native": "dev.sh native",
+    "triangles": "dev.sh triangles",
+    "expanded": "dev.sh expanded",
+    "projected": "dev.sh projected",
     "build-all": "mkdir -p build && ./factor.js && ./compress.sh native triangles expanded projected"
   },
   "keywords": [],

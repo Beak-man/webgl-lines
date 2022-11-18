@@ -4,12 +4,9 @@
 
 Some interactive content for [a blog post](http://mattdesl.svbtle.com/drawing-lines-is-hard).
 
-Demos:
+Live demo:
 
-- [native](http://mattdesl.github.io/webgl-lines/native/) - rendering with `gl.LINES`
-- [triangles](http://mattdesl.github.io/webgl-lines/triangles/) - triangulated stroke
-- [expanded](http://mattdesl.github.io/webgl-lines/expanded/) - expanded in a vertex shader
-- [projected](http://mattdesl.github.io/webgl-lines/projected/) - screen space projected lines
+- [screen-space projected thick lines](http://mattdesl.github.io/webgl-lines/projected/)
 
 ## running demos
 
@@ -24,13 +21,10 @@ npm install
 To start developing a demo, use one of the following:
 
 ```
-  npm run native
-  npm run triangles
-  npm run expanded
   npm run projected
 ```
 
-And open `localhost:9966/[demo]`, for example `localhost:9966/native`.
+And open `localhost:9966`.
 
 ## production
 
