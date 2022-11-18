@@ -43,23 +43,16 @@ function render(dt) {
   mat4.perspective(projection, Math.PI/4, width/height, 0, 1000)
   line.aspect = width/height
 
-  drawMitered()
-  drawSpinning()
+  drawMiteredStraightLines()
+  drawSpinningCircle()
 }
 
-function drawSpinning() {
+function drawSpinningCircle() {
   mat4.rotateY(rotation, rotation, 0.01)
   mat4.identity(spin)
 
   //first create a circle with a small radius
   let path = arc(0, 0, 1, 0, Math.PI*1.5, false, 256)
-  path = path.map((point, i) => {
-    let [x, y, z] = point
-    let v3 = [x||0, y||0, z||0]
-    mat4.rotateY(spin, spin, Math.sin(x/10 * Math.sin(time/1)))
-    transformMat4(v3, v3, spin)
-    return v3
-  })
 
   line.color = [0.2, 0.2, 0.2]
   line.projection = projection
@@ -71,7 +64,7 @@ function drawSpinning() {
   line.draw()
 }
 
-function drawMitered() {
+function drawMiteredStraightLines() {
   mat4.identity(leftRotation)
   mat4.multiply(leftRotation, leftRotation, left)
   mat4.rotateY(leftRotation, leftRotation, Math.sin(time)*0.8)
@@ -79,7 +72,7 @@ function drawMitered() {
   let path = [
     [0, -1], [1, -1],
     [0, 0], [1, 0],
-    [0.25, -0.75]
+    [0.25, -0.50]
   ]
   line.projection = projection
 

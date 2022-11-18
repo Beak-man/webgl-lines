@@ -1,19 +1,20 @@
 # webgl-lines
 
-[![stable](http://badges.github.io/stability-badges/dist/stable.svg)](http://github.com/badges/stability-badges)
+The setup done in the CPU side is located in:
+https://github.com/Beak-man/webgl-lines/blob/master/projected/index.js
 
-Some interactive content for [a blog post](http://mattdesl.svbtle.com/drawing-lines-is-hard).
+The vertex shader that provides width to the 3D lines is located in:
+https://github.com/Beak-man/webgl-lines/blob/master/projected/vert.glsl
 
-Live demo:
-
-- [screen-space projected thick lines](http://mattdesl.github.io/webgl-lines/projected/)
+More information can be found here:
+https://mattdesl.svbtle.com/drawing-lines-is-hard#screenspace-projected-lines_2
 
 ## running demos
 
 First you need to git clone and install dependencies:
 
 ```sh
-git clone https://github.com/mattdesl/webgl-lines.git
+git clone https://github.com/Beak-man/webgl-lines.git
 cd webgl-lines
 npm install
 ```
@@ -24,11 +25,7 @@ To start developing a demo, use one of the following:
   npm run projected
 ```
 
-And open `localhost:9966`.
-
-## production
-
-For the bundle splitting and uglify step, use `npm run build-all`. 
+And open `localhost:9966` in the browser. Tested in Chrome and Firefox.
 
 ## License
 
